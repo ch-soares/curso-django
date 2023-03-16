@@ -26,7 +26,7 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v1
         with:
-          python-version: 3.9
+          python-version: 3.11.1
           architecture: x64
           cache: 'pip'
       - name: Copiar Configurações .env
@@ -63,10 +63,10 @@ jobs:
           python-version: 3.11.1
           architecture: x64
           cache: 'pip'
-      - name: Deploy to Heroku
-        uses: AkhileshNS/heroku-deploy@v3.12.12
-        with:
-          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: "curso-django-pythonpro"
-          heroku_email: "victor.augusto.soliveira@gmail.com"
-          remote_branch: "main"
+#      - name: Deploy to Heroku
+#        uses: AkhileshNS/heroku-deploy@v3.12.12
+#        with:
+#          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+#          heroku_app_name: "curso-django-pythonpro"
+#          heroku_email: "cahenriquesoares@gmail.com"
+#          remote_branch: "main"
