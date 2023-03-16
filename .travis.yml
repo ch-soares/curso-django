@@ -12,7 +12,7 @@ env:
 
 install:
   - pip install pipenv
-  - pip sync -d
+  - pipenv sync -d
   - cp contrib/env-sample .env
 
 script:
