@@ -42,12 +42,14 @@ jobs:
           checkName: 'flake8_py3'
       - name: Rodar Testes Automáticos
         run: |
-          pytest --cov=pypro
+          pipenv run pytest --cov=pypro
+#          pytest --cov=pypro
       - name: Relatório Coverage
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
         run: |
-          codecov
+          pipenv run codecov
+#          codecov
   deploy:
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
