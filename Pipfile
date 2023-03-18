@@ -7,6 +7,10 @@ name = "pypi"
 django = "*"
 pytest-django = "*"
 python-decouple = "*"
+dj-database-url = "*"
+psycopg2-binary = "*"
+whitenoise = "*"
+gunicorn = "*"
 
 [dev-packages]
 flake8 = "*"
