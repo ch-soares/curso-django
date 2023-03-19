@@ -28,7 +28,7 @@ SECRET_KEY = config('SECRET_KEY', default='CHAVE')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', cast=bool, default=False)
 
-ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv(), default='RENDER_EXTERNAL_HOSTNAME')
+ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv(), default='localhost')
 
 
 # Application definition
@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'pypro.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-default_db_url = BASE_DIR / 'dbsqlite3'
+default_db_url = 'sqlite:///' + str(BASE_DIR / 'db.sqlite3')
 
 parse_database = partial(dj_database_url.parse, conn_max_age=600)
 
