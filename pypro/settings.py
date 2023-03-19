@@ -28,7 +28,7 @@ SECRET_KEY = config('SECRET_KEY', default='CHAVE')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', cast=bool, default=False)
 
-ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv(), default='localhost')
+ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv(), default='pypro.onrender.com')
 
 
 # Application definition
