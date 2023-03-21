@@ -11,6 +11,7 @@ dj-database-url = "*"
 psycopg2-binary = "*"
 whitenoise = "*"
 gunicorn = "*"
+django-s3-folder-storage = "*"
 
 [dev-packages]
 flake8 = "*"
