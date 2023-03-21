@@ -161,7 +161,7 @@ if AWS_ACCESS_KEY_ID:
 
     # Static Assets
     # ---------------------------------------------------
-    STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'  # Não está como na vídeo-aula. Ver link: https://github.com/pythonprobr/pythonpro-website/blob/master/pythonpro/settings.py#L259
+    STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'  # Não está como na aula. O Renzo me passou a alteração.
     STATIC_S3_PATH = 'static'
     STATIC_ROOT = f'/{STATIC_S3_PATH}/'
     STATIC_URL = f'//s3.amazonaws.com/{AWS_STORAGE_BUCKET_NAME}/{STATIC_S3_PATH}/'
