@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'collecfast',
     'django.contrib.staticfiles',
     'pypro.base',
 ]
@@ -134,10 +135,12 @@ STATIC_URL = 'static/'
 STATIC_ROOT = BASE_DIR/'staticfiles'
 
 # Configuração do render
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage' # Middleware para a aplicação rodar no render
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'  # Middleware para a aplicação rodar no render
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR/'mediafiles'
+
+COLLECTFAST_ENABLED = False
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
@@ -152,6 +155,8 @@ AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')
 if AWS_ACCESS_KEY_ID:
     AWS_SECRET_ACCESS_KEY = config('AWS_SECRET_ACCESS_KEY')
     AWS_STORAGE_BUCKET_NAME = config('AWS_STORAGE_BUCKET_NAME')
+
+    COLLECTFAST_ENABLED = True
 
     # Static Assets
     # ---------------------------------------------------

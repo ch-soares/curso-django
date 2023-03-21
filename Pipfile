@@ -12,6 +12,7 @@ psycopg2-binary = "*"
 whitenoise = "*"
 gunicorn = "*"
 django-s3-folder-storage = "*"
+collectfast = "*"
 
 [dev-packages]
 flake8 = "*"
