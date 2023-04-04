@@ -47,13 +47,13 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'pypro.urls'
@@ -84,12 +84,8 @@ default_db_url = 'sqlite:///' + str(BASE_DIR / 'db.sqlite3')
 
 parse_database = partial(dj_database_url.parse, conn_max_age=600)
 
-# DATABASES = {
-#     'default': config('DATABASE_URL', default=default_db_url, cast=parse_database)
-# }
-
 DATABASES = {
-    'default': config(default_db_url, default='DATABASE_URL', cast=parse_database)
+    'default': config('DATABASE_URL', default=default_db_url, cast=parse_database)
 }
 
 # DATABASES = {
@@ -140,7 +136,7 @@ STATIC_URL = 'static/'
 STATIC_ROOT = BASE_DIR/'staticfiles'
 
 # Configuração do render
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'  # Middleware para a aplicação rodar no render
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'  # Middleware para a aplicação rodar no fly
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR/'mediafiles'
@@ -151,6 +147,8 @@ COLLECTFAST_ENABLED = False
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CSRF_TRUSTED_ORIGINS = ['https://django-devpro.fly.dev']
 
 AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')
 

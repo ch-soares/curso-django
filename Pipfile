@@ -9,10 +9,10 @@ pytest-django = "*"
 python-decouple = "*"
 dj-database-url = "*"
 psycopg2-binary = "*"
-whitenoise = "*"
 gunicorn = "*"
 django-s3-folder-storage = "*"
 collectfast = "*"
+whitenoise = "*"
 
 [dev-packages]
 flake8 = "*"
