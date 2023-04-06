@@ -75,7 +75,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'pypro.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
@@ -86,14 +85,6 @@ parse_database = partial(dj_database_url.parse, conn_max_age=600)
 DATABASES = {
     'default': config('DATABASE_URL', default=default_db_url, cast=parse_database)
 }
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
@@ -144,9 +135,16 @@ COLLECTFAST_ENABLED = False
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CSRF_TRUSTED_ORIGINS = ['https://django-devpro.fly.dev']
+CSRF_TRUSTED_ORIGINS = config('CSRF_TRUSTED_ORIGINS', default='localhost', cast=Csv())
 
 AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')
+
+# Configuração do django Debug Toolbar
+if DEBUG:
+    AWS_ACCESS_KEY_ID = None  # esta ação teve que ser feita porque o debug tollbar não funcionou com o S3 da amazon
+    INSTALLED_APPS.append('debug_toolbar')
+    MIDDLEWARE.insert(0, 'debug_toolbar.middleware.DebugToolbarMiddleware')
+    INTERNAL_IPS = config('INTERNAL_IPS', cast=Csv(), default='127.0.0.1')
 
 # STORAGE CONFIGURATION IN S3 AWS
 # -------------------------------------------------------
