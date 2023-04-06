@@ -143,7 +143,7 @@ AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')
 
 # Configuração do django Debug Toolbar
 if DEBUG:
-    AWS_ACCESS_KEY_ID = None  # esta ação teve que ser feita porque o debug tollbar não funcionou com o S3 da amazon
+    AWS_ACCESS_KEY_ID = None  # esta ação teve que ser feita porque o debug toolbar não funcionou com o S3 da amazon
     INSTALLED_APPS.append('debug_toolbar')
     MIDDLEWARE.insert(0, 'debug_toolbar.middleware.DebugToolbarMiddleware')
     INTERNAL_IPS = config('INTERNAL_IPS', cast=Csv(), default='127.0.0.1')
