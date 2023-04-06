@@ -14,6 +14,8 @@ from pathlib import Path
 
 import dj_database_url
 from decouple import config, Csv
+import sentry_sdk
+from sentry_sdk.integrations.django import DjangoIntegration
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -178,6 +180,4 @@ if AWS_ACCESS_KEY_ID:
 SENTRY_DSN = config('SENTRY_DSN', default=None)
 
 if SENTRY_DSN:
-    import sentry_sdk
-    from sentry_sdk.integrations.django import DjangoIntegration
     sentry_sdk.init(dsn=SENTRY_DSN, integrations=[DjangoIntegration()])
