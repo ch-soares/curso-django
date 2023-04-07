@@ -81,4 +81,4 @@ Neste sentido, foram utilizadas bibliotecas e ferramentas a fim de auxiliar no d
 
 #### Com exceção do logotipo e a imagem do Dev Pro, que devem ser substuídos pela sua marca, usufrua de todo o resto livremente. Software Livre!
 
-## Divirta-se!
+## Divirta-se!!!
