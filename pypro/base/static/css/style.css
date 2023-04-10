@@ -5,3 +5,7 @@
 .rights {
     background-color: #82b541;
 }
+
+.mailchimp {
+    display: flex;
+}
