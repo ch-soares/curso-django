@@ -1,0 +1,23 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block titulo %}Lista de Todos os Vídeos Gratuitos{% endblock titulo%}
+{% block descricao %}Página com vídeo gratuito de Python{% endblock descricao %}
+
+{% block body %}
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="mt-4 mb-4">
+					<h1>Lista de Vídeos Aperitivos</h1>
+					<ol>
+						{% for video in videos %}
+							<li>{{ video.titulo | default:"Faltando Título" }}</li>
+						{% empty %}
+							<h5>Não encontrado nenhum vídeo de aperitivo.</h5>
+						{% endfor %}
+					</ol>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock body %}
