@@ -1,0 +1,49 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block titulo%}Python Pro - Home{% endblock titulo %}
+{% block body%}
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="jumbotron">
+				<h2>Curso de Python com Luciano Ramalho</h2>
+				<h4 class="mt-4">Entre na fila de espera</h4>
+
+				<!-- Begin Mailchimp Signup Form -->
+				<form action="https://dev.us8.list-manage.com/subscribe/post?u=1b87db3de3bf4cdc72240a6c6&amp;id=67bfee8f58&amp;f_id=00f102e0f0"
+					  method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="mailchimp" target="_blank" novalidate>
+					<div class="mailchimp mb-5">
+						<input type="email" value="" name="EMAIL" class="form-control mr-3 required" id="mce-EMAIL" required placeholder="exemplo@email.com">
+				<span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span>
+						<div class="">
+							<input type="submit" value="Salvar" name="subscribe" id="mc-embedded-subscribe" class="btn btn-primary ml-5">
+						</div>
+						<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_1b87db3de3bf4cdc72240a6c6_67bfee8f58" tabindex="-1" value=""></div>
+					</div>
+				</form>
+
+<!--End mc_embed_signup-->
+				<p>
+					Confira em breve mais informações sobre o curso que será ministrado pelo autor do livro
+				</p>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="card">
+						<h5 class="card-header">
+							Mais detalhe sobre o instrutor
+						</h5>
+						<div class="card-body" >
+								<img src="{% static 'base/img/luciano-ramalho.png' %}" class="img-thumbnail float-md-start mr-5" alt="Foto Luciano Ramalho"/>
+								<p>
+									Ramalho é programador Python desde 1998, Fellow da Python Software Foundation; é sócio e professor do Python.pro.br – uma empresa de treinamento – e cofundador do Garoa Hacker Clube, o primeiro hackerspace do Brasil; e autor do livro
+									<a href="https://pythonfluente.com/" target="_blank">Python Fluente</a>
+								</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock body%}

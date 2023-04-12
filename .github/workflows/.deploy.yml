@@ -44,11 +44,11 @@ jobs:
         run: |
           pipenv run pytest --cov=pypro
 #          pytest --cov=pypro
-      - name: Relatório Coverage
-        env:
-          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
-        run: |
-          pipenv run codecov
+#      - name: Relatório Coverage
+#        env:
+#          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+#        run: |
+#          pipenv run codecov
 #          codecov
 
 #  deploy:
