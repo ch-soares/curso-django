@@ -138,7 +138,9 @@ COLLECTFAST_ENABLED = False
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CSRF_TRUSTED_ORIGINS = config('CSRF_TRUSTED_ORIGINS', default='localhost', cast=Csv())
+# Precisa disso para acessar o admin pelo fly.
+# Mais info: https://discord.com/channels/971162582624903288/1075067391890952253/1095388179445592145
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')
 
