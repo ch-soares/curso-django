@@ -11,7 +11,7 @@
 					<h1>Lista de Vídeos Aperitivos</h1>
 					<ol>
 						{% for video in videos %}
-							<li>{{ video.titulo | default:"Faltando Título" }}</li>
+							<li><a href="{{ video.get_absolute_url }}">{{ video.titulo | default:"Falkland Título" }}</a></li>
 						{% empty %}
 							<h5>Não encontrado nenhum vídeo de aperitivo.</h5>
 						{% endfor %}
