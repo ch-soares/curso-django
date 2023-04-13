@@ -14,13 +14,11 @@ django-s3-folder-storage = "*"
 collectfast = "*"
 django-debug-toolbar = "*"
 sentry-sdk = "*"
-#codecov = "*"
 requests = "*"
 
 [dev-packages]
 flake8 = "*"
 pytest-cov = "*"
-#codecov = "*"
 
 [requires]
 python_version = "3.11"
