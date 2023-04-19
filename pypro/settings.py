@@ -46,6 +46,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'pypro.base',
     'pypro.aperitivos',
+    'pypro.modulos',
+    'ordered_model',
 ]
 
 MIDDLEWARE = [
@@ -71,6 +73,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'pypro.modulos.context_processors.listar_modulos',
             ],
         },
     },
@@ -146,7 +149,6 @@ AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')
 
 # Configuração do django Debug Toolbar
 if DEBUG:
-    AWS_ACCESS_KEY_ID = None  # esta ação teve que ser feita porque o debug toolbar não funcionou com o S3 da amazon
     INSTALLED_APPS.append('debug_toolbar')
     MIDDLEWARE.insert(0, 'debug_toolbar.middleware.DebugToolbarMiddleware')
     INTERNAL_IPS = config('INTERNAL_IPS', cast=Csv(), default='127.0.0.1')

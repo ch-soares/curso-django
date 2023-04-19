@@ -42,8 +42,8 @@ jobs:
           checkName: 'flake8_py3'
       - name: Rodar Testes Automáticos
         run: |
-          pipenv run pytest --cov=pypro
-      - uses: actions/checkout@master
-      - uses: codecov/codecov-action@v3
+          pipenv run pytest pypro --cov=pypro --cov-report=xml --cov-report=term
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v3
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
