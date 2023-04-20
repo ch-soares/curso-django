@@ -89,7 +89,7 @@ default_db_url = 'sqlite:///' + str(BASE_DIR / 'db.sqlite3')
 parse_database = partial(dj_database_url.parse, conn_max_age=600)
 
 DATABASES = {
-    'default': config('DATABASE_URL', default=default_db_url, cast=parse_database)
+    'default': config('DATABASE_URL', default_db_url, cast=parse_database)
 }
 
 # Password validation
