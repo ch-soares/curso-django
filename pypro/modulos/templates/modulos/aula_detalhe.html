@@ -4,6 +4,13 @@
 {% block descricao %}Página com vídeo da aula {{ aula.titulo }}{% endblock descricao %}
 
 {% block body %}
+	<nav aria-label="breadcrumb">
+	  <ol class="breadcrumb mt-2">
+		<li class="breadcrumb-item"><a href="{% url 'base:home' %}">Home</a></li>
+		<li class="breadcrumb-item"><a href="{{ aula.modulo.get_absolute_url }}">{{ aula.modulo.titulo }}</a></li>
+		<li class="breadcrumb-item active" aria-current="page">{{ aula.titulo }}</li>
+	  </ol>
+	</nav>
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
