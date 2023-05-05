@@ -7,11 +7,13 @@
 [![codecov](https://codecov.io/gh/ch-soares/curso-django/branch/main/graph/badge.svg?token=K7IYCXB0SR)](https://codecov.io/gh/ch-soares/curso-django)
 [![CI](https://github.com/ch-soares/curso-django/actions/workflows/.deploy.yml/badge.svg)](https://github.com/ch-soares/curso-django/actions/workflows/.deploy.yml)
 
-[Certificado de conclusão do curso](https://plataforma.dev.pro.br/certificates/Q50LmK)
+## [Certificado de conclusão do curso](https://plataforma.dev.pro.br/certificates/Q50LmK)
+
+## Acesse o [Site](https://django-devpro.fly.dev/)
 
 ## Para instalar localmente:
 
-Supondo que tenha Git e Python (versao: > 3.11) devidamente instalados.
+Supondo que tenha Git e Python (versao: > 3.11) devidamente instalados, no terminal dê os comandos:
 
 ```
 git clone https://github.com/ch-soares/curso-django.git
@@ -21,7 +23,7 @@ python -m pip install pipenv
 pipenv install -d
 ```
 
-Pelo terminal, navegue até o diretório raiz e ative o ambiente virtual: 
+Garanta que esteja no diretório raiz e ative o ambiente virtual: 
 
 ```commandline
 pipenv shell
@@ -80,7 +82,7 @@ Neste sentido, foram utilizadas bibliotecas e ferramentas a fim de auxiliar no d
     >Antes de implementar novas features, primeiramente foram e devem ser feitos testes; seguindo o conceito de TDD. Neste contexto deve se dar a entrega contínua com o Github Actions, em que o deploy só é realizado após todos os testes passarem, além de garantir que o código está de acordo com a PEP-8.
 
   - #### Ferramentas utilizadas:
-    - [Pytest-Django]([Pytest-django](https://pytest-django.readthedocs.io/en/latest/))
+    - [Pytest-Django](https://pytest-django.readthedocs.io/en/latest/)
     - [Pytest-Cov](https://pypi.org/project/pytest-cov/)
     - [Codecov](https://docs.codecov.com/docs)
     - [Flake8](https://pypi.org/project/flake8/) 
