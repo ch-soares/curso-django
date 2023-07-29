@@ -254,12 +254,8 @@
             "version": "==8.12.1"
         },
         "jedi": {
-            "hashes": [
-                "sha256:203c1fd9d969ab8f2119ec0a3342e0b49910045abe6af0a3ae83a5764d54639e",
-                "sha256:bae794c30d07f6d910d32a7048af09b5a39ed740918da923c6b780790ebac612"
-            ],
-            "markers": "python_version >= '3.6'",
-            "version": "==0.18.2"
+            "hashes": [],
+            "version": "==0.19.0"
         },
         "jmespath": {
             "hashes": [
