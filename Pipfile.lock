@@ -463,12 +463,8 @@
             "version": "==0.6.0"
         },
         "sentry-sdk": {
-            "hashes": [
-                "sha256:36a1ca082a3065a8a05aafa4b1e3d74e9459d41fbb0bea8a5364caca68626341",
-                "sha256:82faf9e2c9eb77401a7a187094b126ca25c2a3a478de6704612f48b3346f7a84"
-            ],
-            "index": "pypi",
-            "version": "==1.21.0"
+            "hashes": [],
+            "version": "==1.30.0"
         },
         "setuptools": {
             "hashes": [
