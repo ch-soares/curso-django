@@ -16,7 +16,7 @@ django-debug-toolbar==4.0.0
 django-extensions==3.2.1
 django-ordered-model==3.7.4
 django-s3-folder-storage==0.5
-django-storages==1.13.2
+django-storages==1.14.1
 executing==1.2.0
 filelock==3.11.0
 flake8==6.0.0
