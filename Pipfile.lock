@@ -495,11 +495,8 @@
             "version": "==0.4.4"
         },
         "stack-data": {
-            "hashes": [
-                "sha256:32d2dd0376772d01b6cb9fc996f3c8b57a357089dec328ed4b6553d037eaf815",
-                "sha256:cbb2a53eb64e5785878201a97ed7c7b94883f48b87bfb0bbe8b623c74679e4a8"
-            ],
-            "version": "==0.6.2"
+            "hashes": [],
+            "version": "==0.6.3"
         },
         "traitlets": {
             "hashes": [
