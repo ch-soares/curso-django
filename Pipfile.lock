@@ -270,12 +270,8 @@
             "version": "==1.0.1"
         },
         "matplotlib-inline": {
-            "hashes": [
-                "sha256:f1f41aab5328aa5aaea9b16d083b128102f8712542f819fe7e6a420ff581b311",
-                "sha256:f887e5f10ba98e8d2b150ddcf4702c1e5f8b3a20005eb0f74bfdbd360ee6f304"
-            ],
-            "markers": "python_version >= '3.5'",
-            "version": "==0.1.6"
+            "hashes": [],
+            "version": "==0.1.7"
         },
         "packaging": {
             "hashes": [
