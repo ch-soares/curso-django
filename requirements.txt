@@ -11,7 +11,7 @@ coverage==7.2.3
 decorator==5.1.1
 distlib==0.3.6
 dj-database-url==2.0.0
-Django==4.2
+Django==5.0.6
 django-debug-toolbar==4.0.0
 django-extensions==3.2.1
 django-ordered-model==3.7.4
